@@ -117,6 +117,11 @@ class Adafruit_NeoPixel(object):
 		"""
 		self._led_data[n] = color
 
+	def setPixels(self, array):
+		"""(Adicionado) Seta a fita led pelo array recebido com a cor recebida em 24-bits.
+		"""
+		self._led_data = array
+
 	def setPixelColorRGB(self, n, red, green, blue, white = 0):
 		"""Set LED at position n to the provided red, green, and blue color.
 		Each color component should be a value from 0 to 255 (where 0 is the
